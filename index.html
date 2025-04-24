@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bexley | Naomi Alb</title>
+  <link rel="icon" href="favicon.png" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -25,7 +26,6 @@
       background: var(--white);
       color: var(--black);
       line-height: 1.6;
-      overflow-x: hidden;
     }
 
     header {
@@ -47,47 +47,36 @@
     }
 
     nav a {
-      margin-left: 1.5rem;
-      text-decoration: none;
-      color: var(--black);
-      font-weight: 500;
-      position: relative;
+      margin-left: 1rem;
+      display: inline-block;
     }
 
-    nav a::after {
-      content: '';
-      display: block;
-      width: 0;
-      height: 2px;
-      background: var(--chili);
-      transition: width 0.3s;
-      position: absolute;
-      bottom: -3px;
-      left: 0;
-    }
-
-    nav a:hover::after {
-      width: 100%;
+    nav img {
+      width: 24px;
+      height: 24px;
+      vertical-align: middle;
     }
 
     .hero {
       padding: 6rem 5% 3rem;
       text-align: center;
-      background: linear-gradient(to right, var(--blue), var(--white));
+      background: url('hero-banner.png') center/cover no-repeat;
+      color: white;
       animation: fadeIn 1.5s ease;
     }
 
     .hero h1 {
       font-family: 'Playfair Display', serif;
       font-size: 3.5rem;
-      color: var(--chili);
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
     }
 
     .hero p {
       max-width: 700px;
       margin: 1.5rem auto 0;
       font-size: 1.1rem;
-      opacity: 0.9;
+      color: #fefefe;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
     }
 
     .section {
@@ -113,12 +102,18 @@
       padding: 1.5rem;
       border-radius: 8px;
       background: #fdfdfd;
+      text-align: center;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .service:hover {
       transform: translateY(-5px);
       box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+
+    .service img {
+      width: 40px;
+      margin-bottom: 1rem;
     }
 
     .service h3 {
@@ -179,17 +174,9 @@
     }
 
     @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 2.5rem;
-      }
-
-      .section-title {
-        font-size: 1.5rem;
-      }
-
-      nav {
-        display: none;
-      }
+      .hero h1 { font-size: 2.5rem; }
+      .section-title { font-size: 1.5rem; }
+      nav a { margin-left: 0.5rem; }
     }
   </style>
 </head>
@@ -198,9 +185,9 @@
   <header>
     <div class="logo">Naomi Alb</div>
     <nav>
-      <a href="#">Instagram</a>
-      <a href="#">TikTok</a>
-      <a href="#">LinkedIn</a>
+      <a href="#"><img src="instagram.svg" alt="Instagram" /></a>
+      <a href="#"><img src="tiktok.svg" alt="TikTok" /></a>
+      <a href="#"><img src="linkedin.svg" alt="LinkedIn" /></a>
     </nav>
   </header>
 
@@ -213,14 +200,17 @@
     <h2 class="section-title">Our Services</h2>
     <div class="services">
       <div class="service">
+        <img src="sweetbox.png" alt="Sweetbox Icon">
         <h3>Sweetbox – Monthly Drop Box</h3>
         <p>1–2 exclusive pieces + accessory pack.<br><strong>$40/month</strong></p>
       </div>
       <div class="service">
+        <img src="swap.png" alt="Swap Icon">
         <h3>Swap & Refresh Program</h3>
         <p>Trade old gear for credit & sustainability points.<br><strong>Free</strong></p>
       </div>
       <div class="service">
+        <img src="popup.png" alt="Pop-up Icon">
         <h3>Flash Pop-Up Events</h3>
         <p>Secret city drops with exclusive merch & photos.<br><strong>Free entry</strong></p>
       </div>
