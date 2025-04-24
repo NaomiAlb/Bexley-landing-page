@@ -3,173 +3,192 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bexley by Naomi Alb</title>
+  <title>Naomi Alb | Bexley</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --blue: #92DCE5;
-      --red: #661F14;
-      --white: #ffffff;
-      --black: #000000;
+      --chili: #661F14;
+      --black: #000;
+      --white: #fff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     body {
-      margin: 0;
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      background-color: var(--black);
-      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      color: var(--black);
+      background: var(--white);
+      padding: 2rem;
+      line-height: 1.6;
     }
 
-    nav {
-      background-color: var(--black);
-      color: var(--white);
-      padding: 1rem 2rem;
+    header, nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid var(--white);
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #eee;
     }
 
     nav a {
-      color: var(--blue);
-      text-decoration: none;
       margin-left: 1rem;
-      font-weight: bold;
+      text-decoration: none;
+      color: var(--black);
+      font-weight: 500;
+      position: relative;
     }
 
-    header {
-      padding: 3rem 2rem;
-      text-align: center;
-      background: linear-gradient(to right, var(--blue), var(--red));
-      color: var(--white);
+    nav a::after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 2px;
+      background: var(--chili);
+      transition: width 0.3s;
+      position: absolute;
+      bottom: -3px;
+      left: 0;
     }
 
-    header h1 {
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .hero {
+      margin-top: 3rem;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .section-title {
       font-size: 2rem;
       font-weight: bold;
-      margin-bottom: 1rem;
+      margin: 3rem 0 1rem;
+      font-family: 'Playfair Display', serif;
     }
 
-    .section {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
+    .services {
+      border-top: 1px solid #ccc;
+      margin-top: 1rem;
     }
 
-    h2 {
-      color: var(--blue);
-      font-size: 1.75rem;
-      margin-bottom: 1rem;
+    .service-item {
+      padding: 1.5rem 0;
+      border-bottom: 1px solid #eee;
     }
 
-    .service {
-      background-color: #1a1a1a;
-      padding: 1.5rem;
-      border-left: 5px solid var(--red);
-      margin-bottom: 1.5rem;
-      border-radius: 6px;
-    }
-
-    .service h3 {
-      color: var(--white);
+    .service-item h3 {
+      color: var(--chili);
       margin-bottom: 0.5rem;
     }
 
+    .contact {
+      margin-top: 3rem;
+      border-top: 1px solid #ccc;
+      padding-top: 2rem;
+    }
+
     form {
-      background-color: #1a1a1a;
-      padding: 2rem;
-      border-radius: 8px;
-      border: 1px solid var(--blue);
+      max-width: 600px;
+      display: grid;
+      gap: 1rem;
     }
 
     input, select, textarea {
-      width: 100%;
       padding: 0.75rem;
-      margin: 0.5rem 0 1rem 0;
-      border: none;
-      border-radius: 4px;
-      background-color: #333;
-      color: var(--white);
-    }
-
-    input::placeholder, textarea::placeholder {
-      color: #aaa;
+      border: 1px solid #ccc;
+      font-family: inherit;
+      font-size: 1rem;
     }
 
     button {
-      background-color: var(--red);
+      background: var(--black);
       color: var(--white);
-      padding: 0.75rem 2rem;
+      padding: 1rem;
       border: none;
-      border-radius: 4px;
       cursor: pointer;
+      text-transform: uppercase;
       font-weight: bold;
     }
 
     button:hover {
-      background-color: #4a1410;
+      background: var(--chili);
+    }
+
+    footer {
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      text-align: center;
+      color: #888;
     }
   </style>
 </head>
 <body>
-  <nav>
+
+  <header>
     <div><strong>Naomi Alb</strong></div>
-    <div>
+    <nav>
       <a href="#">Instagram</a>
       <a href="#">TikTok</a>
       <a href="#">LinkedIn</a>
-    </div>
-  </nav>
-
-  <header>
-    <h1>At Bexley’s mission, we build a responsible, ethical, and supportive culture.</h1>
-    <p>We are fully committed to delivering exceptional services and products that can be reflected in our core values and long-term mission.</p>
+    </nav>
   </header>
 
-  <section class="section">
-    <h2>Our Services</h2>
-    <div class="service">
-      <h3>Sweetbox – Monthly Drop Box</h3>
-      <p><strong>What it is:</strong> A subscription box with 1-2 exclusive pieces + accessory/sticker pack.</p>
-      <p><strong>Themes:</strong> Campus drip, chillwear, weekend flex, etc.</p>
-      <p><strong>Price:</strong> $40/month</p>
-    </div>
-    <div class="service">
-      <h3>Swap & Refresh Program</h3>
-      <p><strong>What it is:</strong> Trade in past Sweet Wears gear for credit and sustainability points.</p>
-      <p><strong>You get:</strong> Up to $20 credit per item + leaderboard status in community</p>
-      <p><strong>Price:</strong> Free participation</p>
-    </div>
-    <div class="service">
-      <h3>Flash Pop-Up Events</h3>
-      <p><strong>What it is:</strong> Secret IRL drops in select cities with pop-up shops + mini photo shoots.</p>
-      <p><strong>Bonus:</strong> Free “Sweet Wears” tote or tee for attendees.</p>
-      <p><strong>Access:</strong> Invite-only via app or IG DM</p>
-      <p><strong>Cost:</strong> Free entry, exclusive merch for sale</p>
+  <section class="hero">
+    <h1>BEXLEY</h1>
+    <p>At Bexley’s mission, we build a responsible, ethical, and supportive culture. We are fully committed to delivering exceptional services and products that reflect our core values and long-term mission.</p>
+  </section>
+
+  <section>
+    <h2 class="section-title">Our Services</h2>
+    <div class="services">
+      <div class="service-item">
+        <h3>Sweetbox – Monthly Drop Box</h3>
+        <p>A subscription box with 1-2 exclusive pieces + accessory/sticker pack.<br>Themes: Campus drip, chillwear, weekend flex, etc.<br><strong>Price:</strong> $40/month</p>
+      </div>
+      <div class="service-item">
+        <h3>Swap & Refresh Program</h3>
+        <p>Trade in past Sweet Wears gear for credit and sustainability points.<br>You get up to $20 credit per item + leaderboard status in community.<br><strong>Price:</strong> Free participation</p>
+      </div>
+      <div class="service-item">
+        <h3>Flash Pop-Up Events</h3>
+        <p>Secret IRL drops in select cities with pop-up shops + mini photo shoots.<br>Bonus: Free “Sweet Wears” tote or tee for attendees.<br><strong>Cost:</strong> Free entry, exclusive merch for sale</p>
+      </div>
     </div>
   </section>
 
-  <section class="section">
-    <h2>Contact Form</h2>
-    <p>Let’s get in touch. For any questions regarding merchandise or shipping, contact us at <strong>naomialb19@gmail.com</strong>.</p>
-    <form onsubmit="event.preventDefault(); alert('Thank you for your interest! Please allow us to respond between 1-3 business days! Always a pleasure to work with our customers!');">
-      <label>Name</label>
-      <input type="text" placeholder="Your Name" required>
-
-      <label>Email</label>
-      <input type="email" placeholder="you@example.com" required>
-
-      <label>Select Service</label>
-      <select required>
-        <option>Sweetbox – Monthly Drop Box</option>
-        <option>Swap & Refresh Program</option>
-        <option>Flash Pop-Up Events</option>
+  <section class="contact">
+    <h2 class="section-title">Let’s Get in Touch</h2>
+    <p>For any questions regarding merchandise or shipping, contact us at <a href="mailto:naomialb19@gmail.com">naomialb19@gmail.com</a>. Always looking forward to hearing from our customers!</p>
+    <form action="https://formsubmit.co/naomialb19@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="Name" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <select name="service" required>
+        <option value="">Select Service</option>
+        <option value="Sweetbox">Sweetbox</option>
+        <option value="Swap & Refresh">Swap & Refresh</option>
+        <option value="Flash Events">Flash Events</option>
       </select>
-
-      <label>Message</label>
-      <textarea rows="5" placeholder="Write your message here..." required></textarea>
-
+      <textarea name="message" rows="5" placeholder="Your message..." required></textarea>
       <button type="submit">Submit</button>
+      <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
+      <input type="hidden" name="_autoresponse" value="Thank you for your interest! Please allow us to respond between 1–3 business days.">
     </form>
   </section>
+
+  <footer>
+    &copy; 2025 Naomi Alb / Bexley. All rights reserved.
+  </footer>
+
 </body>
 </html>
+
